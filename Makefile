@@ -3,11 +3,11 @@ build:
 	cp -r admin catalog config.php download image index.php php.ini system build
 
 clean:
-	rm -r build
+	rm -rf build
 
 install: build
-	mkdir /var/opencart
-	cp -r build/* /var/opencart
+	mkdir -p $(DESTDIR)/var/opencart
+	cp -r build/* $(DESTDIR)/var/opencart
 
 .PHONY: install clean
 
