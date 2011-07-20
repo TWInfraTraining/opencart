@@ -23,6 +23,7 @@ install: build
 	chmod 0644 $(DESTDIR)/var/opencart/config.php
 	chmod 0644 $(DESTDIR)/var/opencart/admin/config.php
 
+	mkdir -p $(DESTDIR)/etc/apache2/sites-available
 	cp apache-site $(DESTDIR)/etc/apache2/sites-available/opencart
 
 opencart.deb:
