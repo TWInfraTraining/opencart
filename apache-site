@@ -1,0 +1,22 @@
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+
+	DocumentRoot /var/www
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+	<Directory /var/opencart/>
+		Options FollowSymLinks
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/opencart.error.log
+
+	LogLevel warn
+
+	CustomLog ${APACHE_LOG_DIR}/opencart.access.log combined
+
+</VirtualHost>
