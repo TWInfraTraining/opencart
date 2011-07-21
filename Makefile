@@ -16,7 +16,7 @@ install: build
 	mkdir -p $(DESTDIR)/var/opencart/image/cache/
 	mkdir -p $(DESTDIR)/var/opencart/cache/
 
-	chown -R www-data:www-data /var/opencart
+	chown -R www-data:www-data $(DESTDIR)/var/opencart
 	chmod 0755 $(DESTDIR)/var/opencart/image/
 	chmod 0755 $(DESTDIR)/var/opencart/image/cache/
 	chmod 0755 $(DESTDIR)/var/opencart/cache/
