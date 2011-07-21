@@ -5,6 +5,7 @@ build:
 clean:
 	rm -rf build
 	rm -rf *.deb
+	rm tests.tgz
 
 distclean: clean
 	dh_clean
@@ -30,6 +31,11 @@ opencart.deb:
 	fakeroot debian/rules binary
 
 package: opencart.deb
+
+tests.tgz:
+	tar czvf tests.tgz -C tests features
+
+package-tests: tests.tgz
 
 .PHONY: install clean distclean package
 
