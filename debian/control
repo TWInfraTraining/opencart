@@ -7,7 +7,7 @@ Standards-Version: 3.9.1
 Homepage: http://www.opencart.com/
 
 Package: opencart
-Architecture: any
+Architecture: all
 Depends: php5-mysql, php5-gd, php5-curl, apache2, php5
 Description: A powerful open source shopping cart
  A robust e-commerce solution for Internet merchants with the ability to create their own online business and participate in e-commerce at a minimal cost.
