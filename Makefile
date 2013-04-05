@@ -5,7 +5,7 @@ build:
 clean:
 	rm -rf build
 	rm -rf *.deb
-	rm tests.tgz
+	rm -f tests.tgz
 
 distclean: clean
 	dh_clean
